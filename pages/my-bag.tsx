@@ -116,7 +116,13 @@ const MyBag = (props: Props) => {
                     </div>
                     <div className='flex justify-between items-center font-medium mt-4 pb-8 border-b-[1px]'>
                         <p className='font-semibold tracking-wider'>Total</p>
-                        <p>{products.reduce((a, b: any) => a + b.price, 0)}$</p>
+                        <p>
+                            {products.reduce(
+                                (a, b: any) => a + b.price * b.quantity,
+                                0
+                            )}
+                            $
+                        </p>
                     </div>
                     <div className='flex items-center justify-center mt-8'>
                         {products.length > 0 ? (
