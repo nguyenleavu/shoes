@@ -21,8 +21,8 @@ const Product = ({ data }: Props) => {
                 src={data.image}
                 alt=''
                 className='product md:rounded-none lg:rounded-full'
-                width='600'
-                height='600'
+                width='300'
+                height='300'
                 unoptimized={true}
             />
             <div className='h-30 lg:h-40 bg-white dark:bg-[#151515] text-[#252525] dark:text-[#ddd] rounded-none'>
