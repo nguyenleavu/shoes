@@ -13,14 +13,14 @@ const Product = ({ data }: Props) => {
     const router = useRouter();
     return (
         <div
-            className='bg-[#f6f6f6] border-black rounded-none lg:rounded-sm  cursor-pointer '
+            className='bg-[#f6f6f6] border-black rounded-none lg:rounded-sm  cursor-pointer product'
             onClick={() => router.push(`/${data.id}`)}
         >
             <Image
                 loader={myLoader}
                 src={data.image}
                 alt=''
-                className='product md:rounded-none lg:rounded-full overflow-hidden'
+                className='md:rounded-none lg:rounded-full'
                 width='600'
                 height='600'
                 unoptimized={true}
