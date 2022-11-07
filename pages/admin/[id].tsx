@@ -20,7 +20,6 @@ type Props = {};
 
 const Update = (props: Props) => {
     const router = useRouter();
-    const id = router.query.id;
 
     const [product, setProduct] = useState<products>();
     const [name, setName] = useState('');
@@ -28,13 +27,6 @@ const Update = (props: Props) => {
     const [price, setPrice] = useState(0);
     const [image, setImage] = useState('');
     const [description, setDescription] = useState('');
-
-    const a = {
-        name,
-        introduce,
-        price,
-        description,
-    };
 
     const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files) {

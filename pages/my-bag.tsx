@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { isTemplateExpression } from 'typescript';
 import { myLoader } from '../components/Product';
 import { useAppDispatch, useAppSelector } from '../redux/hook';
 import { removeAll, removeCart } from '../redux/slice/cartSlice';
