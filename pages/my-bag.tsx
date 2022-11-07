@@ -137,16 +137,18 @@ const MyBag = (props: Props) => {
                 <span className='text-2xl'>Favourites</span>
                 <p className='flex'>
                     Want to view your favourites?{' '}
-                    <Link href='/register'>
-                        <a className='mx-1 underline cursor-pointer text-neutral-600'>
+                    <Link
+                        href='/register'
+                        className='mx-1 underline cursor-pointer text-neutral-600'>
+                        
                             Join us
-                        </a>
+                        
                     </Link>
                     or
-                    <Link href='/login'>
-                        <a className='mx-1 underline cursor-pointer text-neutral-600'>
+                    <Link href='/login' className='mx-1 underline cursor-pointer text-neutral-600'>
+                        
                             Sign in
-                        </a>
+                        
                     </Link>
                 </p>
             </div>

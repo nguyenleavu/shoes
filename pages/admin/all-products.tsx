@@ -63,9 +63,9 @@ const AllProducts = ({ products }: Props) => {
                                 href={`/admin/${item.data.id}`}
                                 className='cursor-pointer'
                             >
-                                <a>
-                                    <i className='fa-solid fa-pen-to-square text-xl'></i>
-                                </a>
+
+                                <i className='fa-solid fa-pen-to-square text-xl'></i>
+
                             </Link>
                             <span
                                 className=' cursor-pointer'

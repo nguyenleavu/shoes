@@ -33,10 +33,12 @@ const Home: NextPage = () => {
                 <Canvas />
                 <Shoe />
                 <div className='w-full flex justify-center'>
-                    <Link href='/man'>
-                        <a className='mt-16 px-10 py-4 bg-pink-500 rounded hover:bg-pink-600 absolute bottom-8 font-medium drop-shadow-2xl shadow-black transition-all '>
+                    <Link
+                        href='/man'
+                        className='mt-16 px-10 py-4 bg-pink-500 rounded hover:bg-pink-600 absolute bottom-8 font-medium drop-shadow-2xl shadow-black transition-all '>
+                        
                             SHOP NOW
-                        </a>
+                        
                     </Link>
                 </div>
             </main>

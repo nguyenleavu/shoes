@@ -13,7 +13,6 @@ import Tippy from '@tippyjs/react/headless';
 import Tooltip from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import NavLink from './NavLink';
-import { useTheme } from 'next-themes';
 
 const Header = () => {
     const router = useRouter();
@@ -81,21 +80,23 @@ const Header = () => {
         <header className='h-20 p-4 z-10 border-b-[1px] border-zinc-300 dark:border-zinc-600 fixed top-0 ring-0 left-0 w-full bg-white dark:bg-[#151515]'>
             <div className='px-4 hidden lg:flex items-center h-full justify-between'>
                 <Link href='/'>
-                    <a>
-                        <Image
-                            src={images.logo}
-                            width={100}
-                            height={50}
-                            alt='logo'
-                        />
-                    </a>
+
+                    <Image
+                        src={images.logo}
+                        width={100}
+                        height={50}
+                        alt='logo'
+                    />
+
                 </Link>
                 <ul className='flex items-center  tracking-widest justify-between font-medium text-xl cursor-pointer text-[#252525] dark:text-[#ddd]'>
                     {admin === 'admin@gmail.com' && (
-                        <Link href='/admin'>
-                            <a className='h-10 w-24 flex justify-center items-center bg-blue-400 rounded text-white hover:bg-blue-500 transition-colors'>
+                        <Link
+                            href='/admin'
+                            className='h-10 w-24 flex justify-center items-center bg-blue-400 rounded text-white hover:bg-blue-500 transition-colors'>
+                            
                                 ADMIN
-                            </a>
+                            
                         </Link>
                     )}
                     <li className='px-4'>
@@ -129,11 +130,11 @@ const Header = () => {
                         </label>
                         <button>
                             <Tooltip content='My Bag'>
-                                <Link href='/my-bag'>
-                                    <a className='text-pink-400 relative'>
-                                        <i className='fa-solid fa-cart-shopping text-2xl mr-5'></i>
-                                        <span className='absolute -top-4 left-4 h-5 w-5 bg-pink-400 text-white rounded-full text-sm'>{products.length}</span>
-                                    </a>
+                                <Link href='/my-bag' className='text-pink-400 relative'>
+
+                                    <i className='fa-solid fa-cart-shopping text-2xl mr-5'></i>
+                                    <span className='absolute -top-4 left-4 h-5 w-5 bg-pink-400 text-white rounded-full text-sm'>{products.length}</span>
+
                                 </Link>
                             </Tooltip>
                         </button>
@@ -151,15 +152,19 @@ const Header = () => {
                                             <strong className='flex h-14 w-full justify-center items-center rounded bg-slate-300'>
                                                 Hi, {username}
                                             </strong>
-                                            <Link href='/my-account'>
-                                                <a className='flex hover:bg-[#ffffff39] h-12 w-full justify-center items-center rounded'>
+                                            <Link
+                                                href='/my-account'
+                                                className='flex hover:bg-[#ffffff39] h-12 w-full justify-center items-center rounded'>
+                                                
                                                     My Account
-                                                </a>
+                                                
                                             </Link>
-                                            <Link href='/my-orders'>
-                                                <a className='flex hover:bg-[#ffffff39] h-12 w-full justify-center items-center rounded'>
+                                            <Link
+                                                href='/my-orders'
+                                                className='flex hover:bg-[#ffffff39] h-12 w-full justify-center items-center rounded'>
+                                                
                                                     My Orders
-                                                </a>
+                                                
                                             </Link>
                                             <button
                                                 className='h-12 w-full hover:bg-[#ffffff39] transition-colors flex justify-center items-center rounded'
@@ -169,12 +174,12 @@ const Header = () => {
                                             </button>
                                         </div>
                                     ) : (
-                                        <Link href='/login'>
-                                            <a className='h-12 hover:bg-slate-400 bg-slate-300 transition-colors flex justify-center items-center rounded-lg w-full text-pink-400 hover:text-pink-500'>
-                                                {' '}
-                                                SIGN IN
-                                            </a>
-                                        </Link>
+                                        (<Link
+                                            href='/login'
+                                            className='h-12 hover:bg-slate-400 bg-slate-300 transition-colors flex justify-center items-center rounded-lg w-full text-pink-400 hover:text-pink-500'>
+
+                                            {' '}SIGN IN
+                                        </Link>)
                                     )}
                                 </div>
                             )}
@@ -188,14 +193,14 @@ const Header = () => {
             </div>
             <div className='flex lg:hidden items-center justify-between'>
                 <Link href='/'>
-                    <a>
-                        <Image
-                            src={images.logo}
-                            width={100}
-                            height={50}
-                            alt='logo'
-                        />
-                    </a>
+
+                    <Image
+                        src={images.logo}
+                        width={100}
+                        height={50}
+                        alt='logo'
+                    />
+
                 </Link>
                 <div className='flex justify-center items-center'>
                     <div className='flex items-center justify-center'>
@@ -347,7 +352,7 @@ const Header = () => {
                                     ) : (
                                         <li className='h-20 w-full transition-all border-t-[1px] border-neutral-600 flex items-center'>
                                             <Link href='/login'>
-                                                <a>SIGN IN</a>
+                                                SIGN IN
                                             </Link>
                                         </li>
                                     )}

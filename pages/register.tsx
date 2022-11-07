@@ -53,82 +53,80 @@ const Register = (props: Props) => {
         }
     };
 
-    return (
-        <>
-            {loading && <Loader />}
-            <div className='flex items-center justify-center h-[100vh] relative dark:bg-[#151515]'>
-                <Canvas />
-                <section className='container md:w-[400px]'>
-                    <div className='w-full h-[100vh] md:h-[550px] p-10 relative bg-[#00000080] lg:rounded-3xl dark:rounded-none dark:bg-transparent'>
-                        <h2 className='text-4xl font-semibold relative tracking-[1px] mb-10 text-white'>
-                            Sign Up
-                        </h2>
-                        <form
-                            className='h-[86%] translate-y-8'
-                            onSubmit={handleSubmit}
-                        >
-                            <div className='w-full mt-8'>
-                                <input
-                                    className={
-                                        email.length > 1
-                                            ? 'input invalid placeholder-[#ddd]'
-                                            : 'input placeholder-[#ddd]'
-                                    }
-                                    type='email'
-                                    required
-                                    placeholder='Email'
-                                    value={email}
-                                    onChange={(e) => setEmail(e.target.value)}
-                                />
-                            </div>
-                            <div className='w-full mt-5'>
-                                <input
-                                    className='input placeholder-[#ddd]'
-                                    type='password'
-                                    required
-                                    placeholder='Password'
-                                    value={password}
-                                    onChange={(e) =>
-                                        setPassword(e.target.value)
-                                    }
-                                />
-                            </div>
-                            <div className='w-full mt-5'>
-                                <input
-                                    className='input placeholder-[#ddd]'
-                                    type='password'
-                                    required
-                                    placeholder='Confirm password'
-                                    value={confirmPassword}
-                                    onChange={(e) =>
-                                        setConfirmPassword(e.target.value)
-                                    }
-                                />
-                            </div>
-                            <div className='w-full mt-8 '>
-                                <button
-                                    className='input hover:bg-[rgba(255,255,255,0.3)] transition'
-                                    type='submit'
-                                >
-                                    Sign Up
-                                </button>
-                            </div>
-                            <div className='mt-20 text-center text-white'>
-                                <Link href='/login'>
-                                    <a>
-                                        {`Already an account?`}{' '}
-                                        <span className=' hover:underline'>
-                                            Login
-                                        </span>
-                                    </a>
-                                </Link>
-                            </div>
-                        </form>
-                    </div>
-                </section>
-            </div>
-        </>
-    );
+    return <>
+        {loading && <Loader />}
+        <div className='flex items-center justify-center h-[100vh] relative dark:bg-[#151515]'>
+            <Canvas />
+            <section className='container md:w-[400px]'>
+                <div className='w-full h-[100vh] md:h-[550px] p-10 relative bg-[#00000080] lg:rounded-3xl dark:rounded-none dark:bg-transparent'>
+                    <h2 className='text-4xl font-semibold relative tracking-[1px] mb-10 text-white'>
+                        Sign Up
+                    </h2>
+                    <form
+                        className='h-[86%] translate-y-8'
+                        onSubmit={handleSubmit}
+                    >
+                        <div className='w-full mt-8'>
+                            <input
+                                className={
+                                    email.length > 1
+                                        ? 'input invalid placeholder-[#ddd]'
+                                        : 'input placeholder-[#ddd]'
+                                }
+                                type='email'
+                                required
+                                placeholder='Email'
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
+                        </div>
+                        <div className='w-full mt-5'>
+                            <input
+                                className='input placeholder-[#ddd]'
+                                type='password'
+                                required
+                                placeholder='Password'
+                                value={password}
+                                onChange={(e) =>
+                                    setPassword(e.target.value)
+                                }
+                            />
+                        </div>
+                        <div className='w-full mt-5'>
+                            <input
+                                className='input placeholder-[#ddd]'
+                                type='password'
+                                required
+                                placeholder='Confirm password'
+                                value={confirmPassword}
+                                onChange={(e) =>
+                                    setConfirmPassword(e.target.value)
+                                }
+                            />
+                        </div>
+                        <div className='w-full mt-8 '>
+                            <button
+                                className='input hover:bg-[rgba(255,255,255,0.3)] transition'
+                                type='submit'
+                            >
+                                Sign Up
+                            </button>
+                        </div>
+                        <div className='mt-20 text-center text-white'>
+                            <Link href='/login'>
+
+                                {`Already an account?`}{' '}
+                                <span className=' hover:underline'>
+                                    Login
+                                </span>
+
+                            </Link>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </>;
 };
 
 export default Register;

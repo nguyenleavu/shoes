@@ -38,27 +38,31 @@ const HomeAdmin = (props: Props) => {
                         <i className='fa-solid fa-dollar-sign text-4xl'></i>
                     </p>
                 </div>
-                <Link href='/admin/all-products'>
-                    <a className='block rounded-lg bg-blue-400 p-3 text-white'>
-                        <p className='text-3xl font-semibold '>Products</p>
-                        <p className='flex justify-between mt-4'>
-                            <span className='text-2xl tracking-wider'>
-                                {products && products.length}
-                            </span>
-                            <i className='fa-solid fa-cart-shopping text-4xl'></i>
-                        </p>
-                    </a>
+                <Link
+                    href='/admin/all-products'
+                    className='block rounded-lg bg-blue-400 p-3 text-white'>
+
+                    <p className='text-3xl font-semibold '>Products</p>
+                    <p className='flex justify-between mt-4'>
+                        <span className='text-2xl tracking-wider'>
+                            {products && products.length}
+                        </span>
+                        <i className='fa-solid fa-cart-shopping text-4xl'></i>
+                    </p>
+
                 </Link>
-                <Link href='/admin/orders'>
-                    <a className='block rounded-lg bg-orange-400 p-3 text-white'>
-                        <p className='text-3xl font-semibold '>Orders</p>
-                        <p className='flex justify-between mt-4'>
-                            <span className='text-2xl tracking-wider'>
-                                {orders && orders.length}
-                            </span>
-                            <i className='fa-solid fa-cart-plus text-4xl'></i>
-                        </p>
-                    </a>
+                <Link
+                    href='/admin/orders'
+                    className='block rounded-lg bg-orange-400 p-3 text-white'>
+
+                    <p className='text-3xl font-semibold '>Orders</p>
+                    <p className='flex justify-between mt-4'>
+                        <span className='text-2xl tracking-wider'>
+                            {orders && orders.length}
+                        </span>
+                        <i className='fa-solid fa-cart-plus text-4xl'></i>
+                    </p>
+
                 </Link>
             </div>
         </div>
