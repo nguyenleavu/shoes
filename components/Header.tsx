@@ -17,7 +17,7 @@ import NavLink from './NavLink';
 const Header = () => {
     const router = useRouter();
     const dispatch = useAppDispatch();
-    const products = useAppSelector((state) => state.cart.products);
+    const products = useAppSelector((state:any) => state.cart.products);
 
     const [username, setUsername] = useState<string | null>('');
     const [open, setOpen] = useState(false);
