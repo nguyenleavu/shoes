@@ -2,9 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { isTemplateExpression } from 'typescript';
 import { myLoader } from '../components/Product';
 import { useAppDispatch, useAppSelector } from '../redux/hook';
-import  { removeAll, removeCart } from '../redux/slice/cartSlice';
+import { removeAll, removeCart } from '../redux/slice/cartSlice';
 
 type Props = {};
 
@@ -101,7 +102,10 @@ const MyBag = (props: Props) => {
                         <p>Subtotal</p>
                         {products && (
                             <span className=' '>
-                                {products.reduce((a, b: any) => a + b.price, 0)}
+                                {products.reduce(
+                                    (a, b: any) => a + b.price * b.quantity,
+                                    0
+                                )}
                                 $
                             </span>
                         )}
@@ -139,16 +143,16 @@ const MyBag = (props: Props) => {
                     Want to view your favourites?{' '}
                     <Link
                         href='/register'
-                        className='mx-1 underline cursor-pointer text-neutral-600'>
-                        
-                            Join us
-                        
+                        className='mx-1 underline cursor-pointer text-neutral-600'
+                    >
+                        Join us
                     </Link>
                     or
-                    <Link href='/login' className='mx-1 underline cursor-pointer text-neutral-600'>
-                        
-                            Sign in
-                        
+                    <Link
+                        href='/login'
+                        className='mx-1 underline cursor-pointer text-neutral-600'
+                    >
+                        Sign in
                     </Link>
                 </p>
             </div>

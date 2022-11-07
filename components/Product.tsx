@@ -20,7 +20,7 @@ const Product = ({ data }: Props) => {
                 loader={myLoader}
                 src={data.image}
                 alt=''
-                className='product md:rounded-none'
+                className='product md:rounded-none lg:rounded-full'
                 width='800'
                 height='800'
                 unoptimized={true}
