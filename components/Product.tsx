@@ -25,7 +25,7 @@ const Product = ({ data }: Props) => {
                 height='600'
                 unoptimized={true}
             />
-            <div className='h-30 lg:h-40 bg-white dark:bg-[#151515] text-[#252525] dark:text-[#ddd] rounded-none'>
+            <div className='h-30 lg:h-40 bg-white dark:bg-[#151515] text-[#252525] dark:text-[#ddd] rounded-none px-2'>
                 <h3 className='font-semibold text-base lg:text-2xl pt-4 text-black dark:text-white '>
                     {data.name}
                 </h3>
