@@ -40,7 +40,8 @@ const HomeAdmin = (props: Props) => {
                 </div>
                 <Link
                     href='/admin/all-products'
-                    className='block rounded-lg bg-blue-400 p-3 text-white'>
+                    className='block rounded-lg bg-blue-400 p-3 text-white'
+                    legacyBehavior>
 
                     <p className='text-3xl font-semibold '>Products</p>
                     <p className='flex justify-between mt-4'>
@@ -53,7 +54,8 @@ const HomeAdmin = (props: Props) => {
                 </Link>
                 <Link
                     href='/admin/orders'
-                    className='block rounded-lg bg-orange-400 p-3 text-white'>
+                    className='block rounded-lg bg-orange-400 p-3 text-white'
+                    legacyBehavior>
 
                     <p className='text-3xl font-semibold '>Orders</p>
                     <p className='flex justify-between mt-4'>

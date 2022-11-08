@@ -582,7 +582,7 @@ const Cart = (props: Props) => {
                 </div>
                 <div className='mt-4 px-8'>
                     {userLogin ? (
-                        <button className='w-full h-16 rounded-full bg-black text-[#eee] hover:bg-zinc-800 transition-colors dark:bg-white dark:text-[#151515]'>
+                        <button className='w-full h-16 rounded-full bg-black text-[#eee] hover:bg-zinc-800 transition-colors dark:bg-white dark:text-[#151515]' onClick={handleAddCart}>
                             Add to Bag
                         </button>
                     ) : (

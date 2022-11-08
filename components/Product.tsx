@@ -23,6 +23,7 @@ const Product = ({ data }: Props) => {
                 className='md:rounded-none lg:rounded-full'
                 width='600'
                 height='600'
+                priority
                 unoptimized={true}
             />
             <div className='h-30 lg:h-40 bg-white dark:bg-[#151515] text-[#252525] dark:text-[#ddd] rounded-none px-2'>

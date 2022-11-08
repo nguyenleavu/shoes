@@ -79,12 +79,14 @@ const Header = () => {
     return (
         <header className='h-20 p-4 z-10 border-b-[1px] border-zinc-300 dark:border-zinc-600 fixed top-0 ring-0 left-0 w-full bg-white dark:bg-[#151515]'>
             <div className='px-4 hidden lg:flex items-center h-full justify-between'>
-                <Link href='/'>
+                <Link href='/' legacyBehavior>
                     <Image
                         src={images.logo}
                         width={100}
                         height={50}
                         alt='logo'
+                        className='cursor-pointer'
+                        priority
                     />
                 </Link>
                 <ul className='flex items-center  tracking-widest justify-between font-medium text-xl cursor-pointer text-[#252525] dark:text-[#ddd]'>
@@ -130,11 +132,14 @@ const Header = () => {
                                 <Link
                                     href='/my-bag'
                                     className='text-pink-400 relative'
+                                    legacyBehavior
                                 >
-                                    <i className='fa-solid fa-cart-shopping text-2xl mr-5'></i>
-                                    <span className='absolute -top-4 left-4 h-5 w-5 bg-pink-400 text-white rounded-full text-sm'>
-                                        {products.length}
-                                    </span>
+                                    <a className='text-pink-400'>
+                                        <i className='fa-solid fa-cart-shopping text-2xl mr-5'></i>
+                                        <span className='absolute -top-4 left-4 h-5 w-5 bg-pink-400 text-white rounded-full text-sm'>
+                                            {products.length}
+                                        </span>
+                                    </a>
                                 </Link>
                             </Tooltip>
                         </button>
@@ -175,9 +180,11 @@ const Header = () => {
                                         <Link
                                             href='/login'
                                             className='h-12 hover:bg-slate-400 bg-slate-300 transition-colors flex justify-center items-center rounded-lg w-full text-pink-400 hover:text-pink-500'
+                                            legacyBehavior
                                         >
-                                            {' '}
-                                            SIGN IN
+                                            <a className='h-12 hover:bg-slate-400 bg-slate-300 transition-colors flex justify-center items-center rounded-lg w-full text-pink-400 hover:text-pink-500'>
+                                                SIGN IN
+                                            </a>
                                         </Link>
                                     )}
                                 </div>
@@ -191,23 +198,21 @@ const Header = () => {
                 </div>
             </div>
             <div className='flex lg:hidden items-center justify-between'>
-                <Link href='/'>
+                <Link href='/' legacyBehavior className='cursor-pointer'>
                     <Image
                         src={images.logo}
                         width={100}
                         height={50}
                         alt='logo'
+                        className='cursor-pointer'
+                        priority
                     />
                 </Link>
                 <div className='flex justify-center items-center'>
                     <div className='flex items-center justify-center'>
-                        <button>
+                        <button onClick={() => router.push('/my-bag')}>
                             <Tooltip content='My Bag'>
-                                <Link href='/my-bag'>
-                                    <a>
-                                        <i className='fa-solid fa-cart-shopping text-2xl mr-5 text-pink-400'></i>
-                                    </a>
-                                </Link>
+                                <i className='fa-solid fa-cart-shopping text-2xl mr-5 text-pink-400'></i>
                             </Tooltip>
                         </button>
 
@@ -277,7 +282,7 @@ const Header = () => {
                                             />
                                         </li>
                                     )}
-                                    {username === 'admin' && (
+                                    {admin === 'admin@gmail.com' && (
                                         <Tippy
                                             interactive
                                             trigger='click'

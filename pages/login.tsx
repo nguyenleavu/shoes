@@ -126,21 +126,25 @@ const Login = (props: Props) => {
                             </span>
                         </div>
                         <div className='mt-4 w-full text-white'>
-                            <Link href='/reset-password'>
-                                Forgot Password?{' '}
-                                <span className=' hover:underline'>
-                                    Click Here
-                                </span>
+                            <Link href='/reset-password' legacyBehavior>
+                                <a>
+                                    Forgot Password?{' '}
+                                    <span className=' hover:underline'>
+                                        Click Here
+                                    </span>
+                                </a>
 
                             </Link>
                         </div>
                         <div className='mt-2 text-white'>
-                            <Link href='/register'>
+                            <Link href='/register' legacyBehavior>
 
-                                {`Don't have an account?`}{' '}
-                                <span className=' hover:underline'>
-                                    Sign Up
-                                </span>
+                                <a>
+                                    {`Don't have an account?`}{' '}
+                                    <span className=' hover:underline'>
+                                        Sign Up
+                                    </span>
+                                </a>
 
                             </Link>
                         </div>

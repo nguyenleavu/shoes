@@ -59,10 +59,7 @@ const AllProducts = ({ products }: Props) => {
                         <p className='w-20 hidden lg:block'>{item.data.type}</p>
                         <span className='w-20'>{item.data.price}</span>
                         <div className='flex justify-between w-20'>
-                            <Link
-                                href={`/admin/${item.data.id}`}
-                                className='cursor-pointer'
-                            >
+                            <Link href={`/admin/${item.data.id}`} className='cursor-pointer' legacyBehavior>
 
                                 <i className='fa-solid fa-pen-to-square text-xl'></i>
 

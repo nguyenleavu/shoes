@@ -113,12 +113,14 @@ const Register = (props: Props) => {
                             </button>
                         </div>
                         <div className='mt-20 text-center text-white'>
-                            <Link href='/login'>
+                            <Link href='/login' legacyBehavior>
 
-                                {`Already an account?`}{' '}
-                                <span className=' hover:underline'>
-                                    Login
-                                </span>
+                                <a>
+                                    {`Already an account?`}{' '}
+                                    <span className=' hover:underline'>
+                                        Login
+                                    </span>
+                                </a>
 
                             </Link>
                         </div>

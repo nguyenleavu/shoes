@@ -61,9 +61,9 @@ const CheckOut = (props: Props) => {
     return <>
         {loading && <Loader />}
         {products.length > 0 ? (
-            <div className='flex justify-center py-16'>
-                <div className='w-2/6 '>
-                    <h2 className='text-4xl font-semibold tracking-wider'>
+            <div className='flex justify-center py-16 flex-wrap'>
+                <div className='w-full lg:w-2/6 '>
+                    <h2 className='text-4xl font-semibold tracking-wider px-2'>
                         Checkout Details
                     </h2>
                     <form
@@ -159,7 +159,7 @@ const CheckOut = (props: Props) => {
                         </div>
                     </form>
                 </div>
-                <div className='w-2/6 border-[1px] border-gray-300 rounded-xl p-4 mt-14 mx-4'>
+                <div className='w-full lg:w-2/6 border-[1px] border-gray-300 rounded-xl p-4 mt-14 mx-4'>
                     <h2 className='text-3xl font-medium tracking-wide'>
                         Checkout Summary
                     </h2>
