@@ -8,7 +8,7 @@ type Props = {};
 const HomeAdmin = (props: Props) => {
     const [products, setProducts] = useState([]);
     const [orders, setOrders] = useState([]);
-    console.log()
+    console.log();
     useEffect(() => {
         const fetchAPI = async () => {
             const products: any = [];
@@ -34,37 +34,34 @@ const HomeAdmin = (props: Props) => {
                 <div className='rounded-lg bg-pink-400 p-3 text-white'>
                     <p className='text-3xl font-semibold '>Earnings</p>
                     <p className='flex justify-between mt-4'>
-                        <span className='text-2xl tracking-wider'> ${orders.reduce((a, b: any) => a + b.price, 0)}</span>
+                        <span className='text-2xl tracking-wider'>
+                            {' '}
+                            ${orders.reduce((a, b: any) => a + b.price, 0)}
+                        </span>
                         <i className='fa-solid fa-dollar-sign text-4xl'></i>
                     </p>
                 </div>
-                <Link
-                    href='/admin/all-products'
-                    className='block rounded-lg bg-blue-400 p-3 text-white'
-                    legacyBehavior>
-
-                    <p className='text-3xl font-semibold '>Products</p>
-                    <p className='flex justify-between mt-4'>
-                        <span className='text-2xl tracking-wider'>
-                            {products && products.length}
-                        </span>
-                        <i className='fa-solid fa-cart-shopping text-4xl'></i>
-                    </p>
-
+                <Link href='/admin/all-products' legacyBehavior>
+                    <a className='block rounded-lg bg-blue-400 p-3 text-white'>
+                        <p className='text-3xl font-semibold '>Products</p>
+                        <p className='flex justify-between mt-4'>
+                            <span className='text-2xl tracking-wider'>
+                                {products && products.length}
+                            </span>
+                            <i className='fa-solid fa-cart-shopping text-4xl'></i>
+                        </p>
+                    </a>
                 </Link>
-                <Link
-                    href='/admin/orders'
-                    className='block rounded-lg bg-orange-400 p-3 text-white'
-                    legacyBehavior>
-
-                    <p className='text-3xl font-semibold '>Orders</p>
-                    <p className='flex justify-between mt-4'>
-                        <span className='text-2xl tracking-wider'>
-                            {orders && orders.length}
-                        </span>
-                        <i className='fa-solid fa-cart-plus text-4xl'></i>
-                    </p>
-
+                <Link href='/admin/orders' legacyBehavior>
+                    <a className='block rounded-lg bg-orange-400 p-3 text-white'>
+                        <p className='text-3xl font-semibold '>Orders</p>
+                        <p className='flex justify-between mt-4'>
+                            <span className='text-2xl tracking-wider'>
+                                {orders && orders.length}
+                            </span>
+                            <i className='fa-solid fa-cart-plus text-4xl'></i>
+                        </p>
+                    </a>
                 </Link>
             </div>
         </div>

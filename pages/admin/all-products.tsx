@@ -45,7 +45,9 @@ const AllProducts = ({ products }: Props) => {
                         key={item.uid}
                         className='bg-even flex items-center p-2 lg:p-5 justify-between text-base font-medium rounded-lg'
                     >
-                        <strong className='hidden lg:block w-6'>{index + 1}</strong>
+                        <strong className='hidden lg:block w-6'>
+                            {index + 1}
+                        </strong>
                         <Image
                             loader={myLoader}
                             src={item.data.image}
@@ -55,20 +57,28 @@ const AllProducts = ({ products }: Props) => {
                             unoptimized={true}
                             className='rounded-lg'
                         />
-                        <p className='w-72 mx-4 max-w-[120px] lg:px-0'>{item.data.name}</p>
+                        <p className='w-72 mx-4 max-w-[120px] lg:px-0'>
+                            {item.data.name}
+                        </p>
                         <p className='w-20 hidden lg:block'>{item.data.type}</p>
                         <span className='w-20'>{item.data.price}</span>
                         <div className='flex justify-between w-20'>
-                            <Link href={`/admin/${item.data.id}`} className='cursor-pointer' legacyBehavior>
-
-                                <i className='fa-solid fa-pen-to-square text-xl'></i>
-
+                            <Link
+                                href={`/admin/${item.data.id}`}
+                                className='cursor-pointer'
+                                legacyBehavior
+                            >
+                                <a>
+                                    <i className='fa-solid fa-pen-to-square text-xl'></i>
+                                </a>
                             </Link>
                             <span
                                 className=' cursor-pointer'
                                 onClick={() => handleDelete(item.uid)}
                             >
-                                <i className='fa-solid fa-trash text-xl'></i>
+                                <a className='cursor-pointer'>
+                                    <i className='fa-solid fa-trash text-xl'></i>
+                                </a>
                             </span>
                         </div>
                     </div>
