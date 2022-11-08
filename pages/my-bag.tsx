@@ -249,7 +249,7 @@ const MyBag = (props: Props) => {
                             </div>
                         ))
                     ) : (
-                        <p>There are no items in your bag.</p>
+                        <p className='py-12'>There are no items in your bag.</p>
                     )}
                     {products.length > 0 && (
                         <button
